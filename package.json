@@ -10,7 +10,9 @@
     "preview": "vite preview",
     "prepare": "husky",
     "test": "cross-env VITEST_HEADED=false vitest --config=vitest.config.ts",
-    "test:browser": "cross-env VITEST_HEADED=true vitest --config=vitest.config.ts"
+    "test:browser": "cross-env VITEST_HEADED=true vitest --config=vitest.config.ts",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
@@ -38,6 +40,9 @@
     "typescript-eslint": "^8.48.0",
     "vite": "^7.3.1",
     "vite-tsconfig-paths": "^6.1.1",
-    "vitest-browser-react": "^2.2.0"
+    "vitest-browser-react": "^2.2.0",
+    "storybook": "^10.3.4",
+    "@storybook/react-vite": "^10.3.4",
+    "eslint-plugin-storybook": "^10.3.4"
   }
 }
