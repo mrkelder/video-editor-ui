@@ -1,6 +1,9 @@
+// TODO: refactor with enum
+type ButtonType = 'button' | 'submit' | 'reset'
+
 interface IButton {
 	children: string
-	type?: 'button' | 'submit' | 'reset'
+	type?: ButtonType
 	disabled?: boolean
 	classname?: string
 }
