@@ -1,0 +1,23 @@
+interface IButton {
+	children: string
+	type?: 'button' | 'submit' | 'reset'
+	disabled?: boolean
+	classname?: string
+}
+
+export function Button({
+	children,
+	type = 'button',
+	disabled = false,
+	classname,
+}: IButton) {
+	return (
+		<button
+			type={type}
+			disabled={disabled}
+			className={`px-4 py-2 rounded-md font-medium ${disabled ? 'bg-gray-400 text-gray-200 cursor-now-allowed' : 'bg-blue-500 hover:bg-blue-600 text-white shadow'} ${classname}`}
+		>
+			{children}
+		</button>
+	)
+}
