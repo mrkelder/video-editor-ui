@@ -1,12 +1,4 @@
-// TODO: refactor with enum
-type ButtonType = 'button' | 'submit' | 'reset'
-
-interface ButtonProps {
-	children: string
-	type?: ButtonType
-	disabled?: boolean
-	onClick?: () => void
-}
+import type { ButtonProps } from './Button.types'
 
 export function Button({
 	children,
