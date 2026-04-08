@@ -2,7 +2,7 @@ import { render } from 'vitest-browser-react'
 import { expect, it, describe } from 'vitest'
 import { PasswordInput } from './PasswordInput'
 
-describe('InputPassword component', () => {
+describe('PasswordInput component', () => {
 	describe('props', () => {
 		it("should have type 'password' by default", async () => {
 			const screen = await render(
