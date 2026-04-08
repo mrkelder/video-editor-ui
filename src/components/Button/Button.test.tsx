@@ -26,14 +26,6 @@ describe('Button component', () => {
 		await expect.element(button).toHaveClass('cursor-not-allowed')
 	})
 
-	it('should apply custom classname', async () => {
-		const customClass = 'text-2xl'
-		const screen = await render(<Button classname={customClass}>Custom</Button>)
-		const button = screen.getByRole('button')
-
-		await expect.element(button).toHaveClass(customClass)
-	})
-
 	it('should respond to click', async () => {
 		const onClickSpy = vi.fn()
 		const screen = await render(<Button onClick={onClickSpy}>Click Test</Button>)

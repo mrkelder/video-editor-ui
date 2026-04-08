@@ -32,10 +32,3 @@ export const Disabled: Story = {
 		disabled: true,
 	},
 }
-
-export const CustomStyle: Story = {
-	args: {
-		children: 'Custom Class Button',
-		classname: 'bg-blue-500 hover:bg-purple-700 uppercase cursor-pointer',
-	},
-}
