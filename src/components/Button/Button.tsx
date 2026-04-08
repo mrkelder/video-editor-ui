@@ -1,7 +1,7 @@
 // TODO: refactor with enum
 type ButtonType = 'button' | 'submit' | 'reset'
 
-interface IButton {
+interface ButtonProps {
 	children: string
 	type?: ButtonType
 	disabled?: boolean
@@ -13,7 +13,7 @@ export function Button({
 	type = 'button',
 	disabled = false,
 	onClick,
-}: IButton) {
+}: ButtonProps) {
 	return (
 		<button
 			type={type}
