@@ -3,4 +3,5 @@ export default {
   rules: {
     "type-enum": [2, "always", ["dev", "test", "feat", "fix", "docs"]],
   },
+  ignores: [(message) => message.startsWith("Merge")],
 };
