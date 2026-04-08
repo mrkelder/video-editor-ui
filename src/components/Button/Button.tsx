@@ -1,8 +1,8 @@
-import type { ButtonProps } from './Button.types'
+import { ButtonType, type ButtonProps } from './Button.types'
 
 export function Button({
 	children,
-	type = 'button',
+	type = ButtonType.Button,
 	disabled = false,
 	onClick,
 }: ButtonProps) {
