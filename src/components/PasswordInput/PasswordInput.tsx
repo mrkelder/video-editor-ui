@@ -1,6 +1,24 @@
+import { useState } from 'react'
 import { Input } from '../Input'
 import type { PasswordInputProps } from './PasswordInput.types'
 
 export function PasswordInput(props: PasswordInputProps) {
-	return <Input {...props} type='password' />
+	const [isPasswordVisible, setIsPasswordVisible] = useState(false)
+
+	return <Input 
+						{...props} 
+						type={isPasswordVisible ? 'text' : 'password'} 
+						rightElement={
+							<button
+								type="button"
+								onClick={() => setIsPasswordVisible(prev => !prev)}
+								className='text-gray-400 hover:text-gray-600'
+								aria-label={
+									isPasswordVisible ? 'Hide password' : 'Show password'
+								}
+							>
+								{isPasswordVisible ? 'Hide' : 'Show'}
+							</button>
+						} 
+					/>
 }
