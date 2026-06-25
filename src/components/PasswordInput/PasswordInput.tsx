@@ -14,7 +14,7 @@ export function PasswordInput(props: PasswordInputProps) {
 				<button
 					type='button'
 					onClick={() => setIsPasswordVisible(prev => !prev)}
-					className='text-gray-400 hover:text-gray-600'
+					className='flex h-5 w-5 items-center justify-center text-gray-400 hover:text-gray-600'
 					aria-label={isPasswordVisible ? 'Hide password' : 'Show password'}
 				>
 					<Icon
