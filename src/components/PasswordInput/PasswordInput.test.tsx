@@ -8,7 +8,7 @@ describe('PasswordInput component', () => {
 			const screen = await render(
 				<PasswordInput label='Password' name='password' />,
 			)
-			const input = screen.getByLabelText('Password')
+			const input = screen.getByLabelText('Password', { exact: true })
 
 			await expect.element(input).toHaveAttribute('type', 'password')
 		})
