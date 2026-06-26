@@ -7,13 +7,22 @@ const meta: Meta<typeof Icon> = {
 	tags: ['autodocs'],
 	argTypes: {
 		name: {
-			control: 'text',
+			control: 'select',
+			options: [
+				'visibility',
+				'visibility_off',
+				'search',
+				'add',
+				'calendar_month',
+				'check',
+				'close',
+				'edit',
+				'delete',
+				'attach_file',
+			]
 		},
 		size: {
 			control: 'number',
-		},
-		className: {
-			control: 'text',
 		},
 		ariaHidden: {
 			control: 'boolean',
