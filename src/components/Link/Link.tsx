@@ -8,9 +8,16 @@ export function Link({ text, link }: LinkProps) {
 		'text-blue-600 hover:text-blue-800 underline-offset-2 hover:underline'
 
 	if (isExternalLink) {
-		<a href={link} rel='noopener noreferrer' className={linkClassName}>
-			{text}
-		</a>
+		return (
+			<a
+				href={link}
+				target='_blank'
+				rel='noopener noreferrer'
+				className={linkClassName}
+			>
+				{text}
+			</a>
+		)
 	}
 
 	return (
