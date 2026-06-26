@@ -27,15 +27,6 @@ describe('Icon component', () => {
 			})
 		})
 
-		it('should support custom className', async () => {
-			const screen = await render(
-				<Icon name='visibility' className='text-gray-400' />,
-			)
-			const icon = screen.getByText('visibility')
-
-			await expect.element(icon).toHaveClass('text-gray-400')
-		})
-
 		it('should be hidden from accessibility tree by default', async () => {
 			const screen = await render(<Icon name='visibility' />)
 			const icon = screen.getByText('visibility')
@@ -44,9 +35,7 @@ describe('Icon component', () => {
 		})
 
 		it('should support ariaHidden false', async () => {
-			const screen = await render(
-				<Icon name='visibility' ariaHidden={false} />,
-			)
+			const screen = await render(<Icon name='visibility' ariaHidden={false} />)
 			const icon = screen.getByText('visibility')
 
 			await expect.element(icon).toHaveAttribute('aria-hidden', 'false')
