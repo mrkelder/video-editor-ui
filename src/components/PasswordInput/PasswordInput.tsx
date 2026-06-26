@@ -6,6 +6,10 @@ import type { PasswordInputProps } from './PasswordInput.types'
 export function PasswordInput(props: PasswordInputProps) {
 	const [isPasswordVisible, setIsPasswordVisible] = useState(false)
 
+	function handlePasswordVisibilityToggle() {
+		setIsPasswordVisible(prev => !prev)
+	}
+
 	return (
 		<Input
 			{...props}
@@ -13,7 +17,8 @@ export function PasswordInput(props: PasswordInputProps) {
 			rightElement={
 				<button
 					type='button'
-					onClick={() => setIsPasswordVisible(prev => !prev)}
+					disabled={props.disabled}
+					onClick={handlePasswordVisibilityToggle}
 					className='flex h-5 w-5 items-center justify-center text-gray-400 hover:text-gray-600'
 					aria-label={isPasswordVisible ? 'Hide password' : 'Show password'}
 				>
