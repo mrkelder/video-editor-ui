@@ -34,7 +34,7 @@ export function Input({
 		<div className='flex flex-col gap-1.5 w-full'>
 			<label
 				htmlFor={generatedId}
-				className='text-sm font-medium text-gray-700'
+				className='w-max text-sm font-medium text-gray-700'
 			>
 				{label}
 			</label>
