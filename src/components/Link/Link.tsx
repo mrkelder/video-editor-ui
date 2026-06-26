@@ -1,17 +1,21 @@
+import { Link as ReactRouterLink } from 'react-router'
 import type { LinkProps } from './Link.types'
 
-export function Link({ text, link, target, rel, ...props }: LinkProps) {
-	const secureRel = target === '_blank' ? 'noopener noreferrer' : rel
+export function Link({ text, link }: LinkProps) {
+	const isExternalLink = link.startsWith('https://')
 
-	return (
-		<a
-			{...props}
-			href={link}
-			target={target}
-			rel={secureRel}
-			className='text-blue-600 hover:text-blue-800 underline-offset-2 hover:underline'
-		>
+	const linkClassName =
+		'text-blue-600 hover:text-blue-800 underline-offset-2 hover:underline'
+
+	if (isExternalLink) {
+		<a href={link} rel='noopener noreferrer' className={linkClassName}>
 			{text}
 		</a>
+	}
+
+	return (
+		<ReactRouterLink to={link} className={linkClassName}>
+			{text}
+		</ReactRouterLink>
 	)
 }
