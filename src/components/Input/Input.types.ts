@@ -1,4 +1,4 @@
-import type { InputHTMLAttributes } from 'react'
+import type { InputHTMLAttributes, ReactNode } from 'react'
 
 export interface InputProps extends Omit<
 	InputHTMLAttributes<HTMLInputElement>,
@@ -7,4 +7,5 @@ export interface InputProps extends Omit<
 	label: string
 	name: string
 	error?: string
+	rightElement?: ReactNode
 }
