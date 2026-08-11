@@ -7,7 +7,7 @@ export function Button({
 	onClick,
 }: ButtonProps) {
 	const disabledButtonStyle = 'bg-gray-400 text-gray-200 cursor-not-allowed'
-	const enabledButtonStyle = 'bg-blue-500 hover:bg-blue-600 text-white shadow'
+	const enabledButtonStyle = 'bg-blue-500 hover:bg-blue-600 text-white shadow cursor-pointer'
 
 	const totalClassName = `px-4 py-2 rounded-md font-medium transition-colors ${disabled ? disabledButtonStyle : enabledButtonStyle}`
 
